@@ -32,3 +32,6 @@ next-env.d.ts
 
 # local tooling
 .agents/
+
+# local diagnostics artifacts
+content.txt
