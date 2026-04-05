@@ -22,16 +22,16 @@ export function Teacher() {
     <section
       ref={sectionRef}
       id="teacher"
-      className="relative py-24 sm:py-32 lg:py-40 overflow-hidden"
+      className="relative overflow-hidden py-20 sm:py-28 lg:py-36"
     >
       {/* Background: large "Class of 2026" text marquee */}
       <div className="absolute inset-0 flex flex-col justify-center pointer-events-none select-none overflow-hidden">
         {[classProfile.className, "Wali Kelas", classProfile.generation].map((text, i) => (
           <p
             key={i}
-            className="text-[80px] sm:text-[120px] lg:text-[160px] font-black text-white/[0.025] whitespace-nowrap tracking-tight leading-none"
+            className="text-[52px] sm:text-[110px] lg:text-[150px] font-black leading-none tracking-tight text-white/[0.025] whitespace-nowrap"
             style={{
-              transform: `translateX(${i % 2 === 0 ? "-5%" : "-15%"})`,
+              transform: `translateX(${i % 2 === 0 ? "-2%" : "-10%"})`,
             }}
           >
             {text}
@@ -54,7 +54,7 @@ export function Teacher() {
           <p className="text-[10px] sm:text-xs font-bold tracking-[0.4em] uppercase text-premium-gold mb-4">
             Homeroom Teacher
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white">
+          <h2 className="mx-auto max-w-4xl px-2 text-2xl leading-tight font-extrabold text-white sm:px-0 sm:text-4xl md:text-5xl lg:text-6xl">
             Pembimbing Kelas {classProfile.className}
           </h2>
           <div className="mt-4 mx-auto w-16 h-0.5 bg-gradient-to-r from-transparent via-premium-gold to-transparent" />
@@ -105,7 +105,7 @@ export function Teacher() {
           {/* Info column */}
           <motion.div
             style={{ x: infoX, opacity: infoOpacity }}
-            className="text-center md:text-left"
+            className="px-1 text-center md:px-0 md:text-left"
           >
             {/* Lead Mentor label */}
             <p className="text-[10px] sm:text-xs font-bold tracking-[0.4em] uppercase text-premium-gold/70 mb-6">
@@ -114,8 +114,8 @@ export function Teacher() {
 
             {/* Quote */}
             <div className="relative mb-8">
-              <Quote className="absolute -top-2 -left-1 md:-left-6 size-8 sm:size-10 text-premium-gold/15" />
-              <blockquote className="relative text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-white/85 italic pl-4 md:pl-0">
+              <Quote className="absolute -top-2 left-0 size-8 text-premium-gold/15 sm:size-10 md:-left-5" />
+              <blockquote className="relative text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-white/85 italic">
                 &ldquo;{teacherData.quote}&rdquo;
               </blockquote>
             </div>

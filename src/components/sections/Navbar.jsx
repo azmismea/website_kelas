@@ -47,7 +47,7 @@ export function Navbar() {
           : "bg-gradient-to-b from-slate-900/55 to-transparent py-5"
       )}
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="relative flex items-center justify-center">
           <div className="hidden md:flex items-center space-x-2">
             {NAV_LINKS.map((link) => {
@@ -120,7 +120,7 @@ export function Navbar() {
             transition={{ duration: 0.32, ease: "easeOut" }}
             className="fixed inset-0 z-[105] h-screen w-full bg-white md:hidden"
           >
-            <div className="flex h-full flex-col items-center justify-center space-y-8 px-6">
+            <div className="flex h-full flex-col items-center justify-center space-y-7 px-6">
               {NAV_LINKS.map((link, i) => (
                 <motion.a
                   key={link.href}
@@ -129,7 +129,7 @@ export function Navbar() {
                   initial={{ y: 22, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: i * 0.1 }}
-                  className="text-4xl font-black uppercase tracking-tight text-slate-900 transition-colors hover:text-blue-600"
+                  className="text-3xl font-black uppercase tracking-tight text-slate-900 transition-colors hover:text-blue-600 sm:text-4xl"
                 >
                   {link.label}
                 </motion.a>
